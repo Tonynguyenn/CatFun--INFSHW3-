@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/catName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Cat Name"
+            android:textColor="#F44336"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#F44336"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintTop_toTopOf="@id/catName1"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/descriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginTop="32dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginStart="16dp"
+            android:textSize="24dp"
+            app:layout_constraintTop_toBottomOf="@id/catName1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/catDescription"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:text="Description Text"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTitle"
+            app:layout_constraintStart_toStartOf="@id/descriptionTitle" />
+
+        <ImageView
+            android:id="@+id/catImage"
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="@id/descriptionTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+        <ImageButton
+            android:id="@+id/favouritesButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F44336"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            app:layout_constraintEnd_toEndOf="@id/catImage"
+            app:layout_constraintStart_toStartOf="@id/catImage"
+            app:layout_constraintTop_toBottomOf="@id/catImage"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/originTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Origin"
+            android:layout_marginTop="32dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginStart="16dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catDescription"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/catOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Origin Text"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/originTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/weightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catTemperament"
+            app:layout_constraintStart_toStartOf="@id/catTemperament"/>
+
+        <TextView
+            android:id="@+id/catWeight"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:text="Weight Text"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/weightTitle"
+            app:layout_constraintStart_toStartOf="@id/catWikipediaURL"/>
+
+        <TextView
+            android:id="@+id/temperamentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperament"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catOrigin"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/catTemperament"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:text="Temperament Text"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/temperamentTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/lifeSpanTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life Span"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catWeight"
+            app:layout_constraintStart_toStartOf="@id/catWeight"/>
+
+        <TextView
+            android:id="@+id/catLifeSpan"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:text="Life Span Text"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/lifeSpanTitle"
+            app:layout_constraintStart_toStartOf="@id/catWeight"/>
+
+        <TextView
+            android:id="@+id/wikipediaURLTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wikipedia Link"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catDogFriendlinessLevel"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/catWikipediaURL"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:text="Wikipedia URL Text"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/wikipediaURLTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/dogFriendlinessLevelTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dog Friendliness Level"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko_bold"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:textSize="26dp"
+            app:layout_constraintTop_toBottomOf="@id/catLifeSpan"
+            app:layout_constraintStart_toStartOf="@id/catLifeSpan"/>
+
+        <TextView
+            android:id="@+id/catDogFriendlinessLevel"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/amiko"
+            android:text="Dog Friendliness Level Text"
+            android:layout_marginEnd="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/dogFriendlinessLevelTitle"
+            app:layout_constraintStart_toStartOf="@id/catLifeSpan"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
